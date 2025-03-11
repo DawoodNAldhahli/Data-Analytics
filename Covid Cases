@@ -1,1 +1,10 @@
-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+df = pd.read_csv( 'https://www.fdsp.net/data/covid-merged.csv' )
+df['gdp']=df['gdp']/1000
+df = df.rename(columns = {'gdp':'gdp (billion $)'})
+df.head()
+df.describe()
